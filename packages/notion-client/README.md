@@ -6,7 +6,8 @@
 	<br>
 </div>
 
-![Build status](https://github.com/jahands/notion-sdk-js/actions/workflows/test.yml/badge.svg)
+![Test status](https://github.com/jahands/notion-sdk-js/actions/workflows/test.yml/badge.svg)
+![Release status](https://github.com/jahands/notion-sdk-js/actions/workflows/release.yml/badge.svg)
 [![npm version](https://badge.fury.io/js/%40jahands%2Fnotion-client.svg)](https://www.npmjs.com/package/@jahands/notion-client)
 
 Modernized fork of https://github.com/makenotion/notion-sdk-js
