@@ -21,8 +21,9 @@ check *flags:
   bun runx check {{flags}}
 
 # Run tests
+[no-cd]
 test *flags:
-  bun run test:ci
+  bun runx test {{flags}}
 
 [no-cd]
 build:

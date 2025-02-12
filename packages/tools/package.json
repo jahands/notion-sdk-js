@@ -4,6 +4,7 @@
 	"private": true,
 	"license": "MIT",
 	"sideEffects": false,
+	"main": "src/index.ts",
 	"directories": {
 		"bin": "bin"
 	},

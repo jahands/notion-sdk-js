@@ -4,6 +4,6 @@ import { $ } from '@repo/tools'
 export default async function (): Promise<void> {
 	const label = 'Built Worker'
 	console.time(label)
-	await $({ cwd: __dirname })`turbo build`
+	await $({ cwd: __dirname })`turbo build:wrangler`
 	console.timeEnd(label)
 }

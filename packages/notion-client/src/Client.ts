@@ -195,8 +195,9 @@ export default class Client {
 			headers['content-type'] = 'application/json'
 		}
 		try {
+			const _fetch = this.#fetch
 			const response = await RequestTimeoutError.rejectAfterTimeout(
-				this.#fetch(url.toString(), {
+				_fetch(url.toString(), {
 					method: method.toUpperCase(),
 					headers,
 					body: bodyAsJsonString,
