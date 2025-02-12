@@ -1,6 +1,6 @@
 {
 	"name": "parse-text-from-any-block-type",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Retrieve blocks from a Notion page and parse text from any block type.",
 	"bugs": {
 		"url": "https://github.com/makenotion/notion-sdk-js/issues"
