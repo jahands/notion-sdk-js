@@ -10,11 +10,14 @@
 		"build/src/**"
 	],
 	"scripts": {
+		"build:packages": "turbo build -F './packages/*'",
 		"changeset:new": "run-changeset-new",
 		"check:deps": "runx check --deps",
 		"check:format": "runx check --format",
 		"check:links": "runx check --links",
 		"check:spelling": "runx check --spelling",
+		"publish": "changeset publish",
+		"release": "run-s build:packages publish",
 		"test:ci": "run-vitest-ci"
 	},
 	"dependencies": {
