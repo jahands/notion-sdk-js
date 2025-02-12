@@ -1,6 +1,7 @@
 {
 	"name": "@jahands/notion-client",
 	"version": "2.2.15",
+	"private": false,
 	"description": "A simple and easy to use client for the Notion API",
 	"keywords": [
 		"notion",
@@ -22,6 +23,7 @@
 		"name": "Jacob Hands",
 		"url": "https://github.com/jahands"
 	},
+	"sideEffects": false,
 	"type": "module",
 	"exports": {
 		"import": {
