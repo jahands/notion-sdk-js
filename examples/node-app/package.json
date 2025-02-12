@@ -1,0 +1,22 @@
+{
+	"name": "@repo/node-example",
+	"version": "0.1.0",
+	"private": true,
+	"sideEffects": false,
+	"scripts": {
+		"check:lint": "run-eslint",
+		"check:types": "run-tsc",
+		"test": "run-vitest"
+	},
+	"dependencies": {
+		"http-codex": "^0.4.6",
+		"zod": "3.24.1"
+	},
+	"devDependencies": {
+		"@jahands/notion-client": "workspace:*",
+		"@repo/eslint-config": "workspace:*",
+		"@repo/tools": "workspace:*",
+		"@repo/typescript-config": "workspace:*",
+		"vitest": "2.1.1"
+	}
+}
