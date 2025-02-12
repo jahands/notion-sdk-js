@@ -1,6 +1,7 @@
 {
 	"name": "intro-to-notion-api",
 	"version": "1.0.1",
+	"private": true,
 	"description": "Introductory examples of using Notion's public API via the Notion SDK for JavaScript.",
 	"bugs": {
 		"url": "https://github.com/makenotion/notion-sdk-js/issues"
