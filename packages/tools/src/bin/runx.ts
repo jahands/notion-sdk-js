@@ -5,6 +5,7 @@ import { catchProcessError } from '@jahands/cli-tools'
 
 import { checkCmd } from '../cmd/check'
 import { fixCmd } from '../cmd/fix'
+import { parseChangesetCmd } from '../cmd/parse-changeset'
 import { updateCmd } from '../cmd/update'
 
 program
@@ -14,6 +15,7 @@ program
 	.addCommand(checkCmd)
 	.addCommand(fixCmd)
 	.addCommand(updateCmd)
+	.addCommand(parseChangesetCmd)
 
 	// Don't hang for unresolved promises
 	.hook('postAction', () => process.exit(0))
