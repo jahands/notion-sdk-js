@@ -6,6 +6,11 @@
 		"signature": true
 	},
 	"tasks": {
+		"build:wrangler": {
+			"dependsOn": ["build"],
+			"outputs": ["dist/**"],
+			"outputLogs": "new-only"
+		},
 		"build": {
 			"dependsOn": ["^build"],
 			"outputs": ["dist/**"],

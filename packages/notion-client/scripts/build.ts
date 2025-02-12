@@ -1,6 +1,6 @@
-import 'zx/globals'
-
 import * as esbuild from 'esbuild'
+
+import { $, fs } from '@repo/tools'
 
 import { entryPoints } from './entrypoints'
 
@@ -18,5 +18,6 @@ await Promise.all([
 		format: 'esm',
 		bundle: true,
 		treeShaking: true,
+		external: ['node-fetch'],
 	}),
 ])

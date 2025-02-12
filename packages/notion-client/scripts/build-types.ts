@@ -1,5 +1,3 @@
-import 'zx/globals'
-
 import { inspect } from 'util'
 import ts from 'typescript'
 
