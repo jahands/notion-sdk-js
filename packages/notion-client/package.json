@@ -1,6 +1,6 @@
 {
 	"name": "@jahands/notion-client",
-	"version": "2.2.19",
+	"version": "2.2.20",
 	"private": false,
 	"description": "A simple and easy to use client for the Notion API",
 	"keywords": [

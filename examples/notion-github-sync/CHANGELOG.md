@@ -1,5 +1,12 @@
 # github-issue-sync
 
+## 1.0.5
+
+### Patch Changes
+
+- Updated dependencies [8dff00f]
+  - @jahands/notion-client@2.2.20
+
 ## 1.0.4
 
 ### Patch Changes
