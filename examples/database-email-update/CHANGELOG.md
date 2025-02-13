@@ -1,5 +1,12 @@
 # database-update-send-email
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies [b36ac39]
+  - @jahands/notion-client@2.2.19
+
 ## 1.0.3
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @jahands/notion-client
 
+## 2.2.19
+
+### Patch Changes
+
+- b36ac39: chore: Switch from esbuild back to tsc
+
+  I learned that bundling isn't helpful in many cases
+
 ## 2.2.18
 
 ### Patch Changes

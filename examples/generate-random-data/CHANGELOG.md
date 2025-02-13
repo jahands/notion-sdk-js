@@ -1,5 +1,12 @@
 # generate-random-data
 
+## 1.0.5
+
+### Patch Changes
+
+- Updated dependencies [b36ac39]
+  - @jahands/notion-client@2.2.19
+
 ## 1.0.4
 
 ### Patch Changes
