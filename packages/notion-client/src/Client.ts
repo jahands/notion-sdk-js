@@ -1,6 +1,5 @@
 import nodeFetch from 'node-fetch'
 
-import { name as PACKAGE_NAME, version as PACKAGE_VERSION } from '../package.json'
 import {
 	appendBlockChildren,
 	createComment,
@@ -23,15 +22,16 @@ import {
 	updateBlock,
 	updateDatabase,
 	updatePage,
-} from './api-endpoints'
+} from './api-endpoints.js'
 import {
 	buildRequestError,
 	isHTTPResponseError,
 	isNotionClientError,
 	RequestTimeoutError,
-} from './errors'
-import { LogLevel, logLevelSeverity, makeConsoleLogger } from './logging'
-import { pick } from './utils'
+} from './errors.js'
+import { LogLevel, logLevelSeverity, makeConsoleLogger } from './logging.js'
+import { PACKAGE_NAME, PACKAGE_VERSION } from './package.js'
+import { pick } from './utils.js'
 
 import type { Agent } from 'http'
 import type {
@@ -77,9 +77,9 @@ import type {
 	UpdateDatabaseResponse,
 	UpdatePageParameters,
 	UpdatePageResponse,
-} from './api-endpoints'
-import type { SupportedFetch } from './fetch-types'
-import type { Logger } from './logging'
+} from './api-endpoints.js'
+import type { SupportedFetch } from './fetch-types.js'
+import type { Logger } from './logging.js'
 
 export interface ClientOptions {
 	auth?: string

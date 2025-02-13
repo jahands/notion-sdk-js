@@ -1,7 +1,7 @@
-import { isObject } from './utils'
+import { isObject } from './utils.js'
 
-import type { SupportedResponse } from './fetch-types'
-import type { Assert } from './type-utils'
+import type { SupportedResponse } from './fetch-types.js'
+import type { Assert } from './type-utils.js'
 
 /**
  * Error codes returned in responses from the API.
@@ -82,7 +82,7 @@ function isNotionClientErrorWithCode<Code extends NotionErrorCode>(
  */
 export class RequestTimeoutError extends NotionClientErrorBase<ClientErrorCode.RequestTimeout> {
 	readonly code = ClientErrorCode.RequestTimeout
-	readonly name = 'RequestTimeoutError'
+	override readonly name = 'RequestTimeoutError'
 
 	constructor(message = 'Request to Notion API has timed out') {
 		super(message)
@@ -111,7 +111,7 @@ export class RequestTimeoutError extends NotionClientErrorBase<ClientErrorCode.R
 type HTTPResponseErrorCode = ClientErrorCode.ResponseError | APIErrorCode
 
 class HTTPResponseError<Code extends HTTPResponseErrorCode> extends NotionClientErrorBase<Code> {
-	readonly name: string = 'HTTPResponseError'
+	override readonly name: string = 'HTTPResponseError'
 	readonly code: Code
 	readonly status: number
 	readonly headers: SupportedResponse['headers']
@@ -165,7 +165,7 @@ export function isHTTPResponseError(
  * a property-formatted error.
  */
 export class UnknownHTTPResponseError extends HTTPResponseError<ClientErrorCode.ResponseError> {
-	readonly name = 'UnknownHTTPResponseError'
+	override readonly name = 'UnknownHTTPResponseError'
 
 	constructor(args: {
 		status: number
@@ -206,7 +206,7 @@ const apiErrorCodes: { [C in APIErrorCode]: true } = {
  * Use the `code` property to handle various kinds of errors. All its possible values are in `APIErrorCode`.
  */
 export class APIResponseError extends HTTPResponseError<APIErrorCode> {
-	readonly name = 'APIResponseError'
+	override readonly name = 'APIResponseError'
 
 	static isAPIResponseError(error: unknown): error is APIResponseError {
 		return isNotionClientErrorWithCode(error, apiErrorCodes)

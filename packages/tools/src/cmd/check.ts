@@ -6,10 +6,12 @@ import { getOutcome } from '../proc'
 
 export const checkCmd = new Command('check')
 	.description(
-		'Check for issues with deps/lint/types/format. If no options are provided, all checks are run.'
+		'Check for issues with deps/lint/types/format. If no options are provided, all default checks are run.'
 	)
 
 	.option('-r, --root', 'Run checks from root of repo. Defaults to cwd', false)
+
+	// Default checks
 	.option('-d, --deps', 'Check for dependency issues with Syncpack')
 	.option('-l, --lint', 'Check for eslint issues')
 	.option('-t, --types', 'Check for TypeScript issues')
@@ -17,13 +19,16 @@ export const checkCmd = new Command('check')
 	.option('-s, --spelling', 'Check for spelling issues')
 	.option('-k, --links', 'Check for markdown link issues')
 
-	.action(async ({ root, deps, lint, types, format, spelling, links }) => {
+	// Non-default checks
+	.option('-e, --exports', 'Checks package exports')
+
+	.action(async ({ root, deps, lint, types, format, spelling, links, exports }) => {
 		const repoRoot = getRepoRoot()
 		if (root) {
 			cd(repoRoot)
 		}
-		// Run all if none are selected
-		if (!deps && !lint && !types && !format && !spelling && !links) {
+		// Run all default checks if none are selected
+		if (!deps && !lint && !types && !format && !spelling && !links && !exports) {
 			deps = true
 			lint = true
 			types = true
@@ -43,6 +48,7 @@ export const checkCmd = new Command('check')
 			types: ['turbo', 'check:types'],
 			spelling: ['cspell', 'lint', '**/*'],
 			links: 'git ls-files | grep md$ | xargs -n 1 markdown-link-check'.split(' '),
+			exports: ['attw', '--pack', '.', '--profile=esm-only'],
 		} as const satisfies { [key: string]: string[] }
 
 		type TableRow = [string, string, string, string]
@@ -120,6 +126,18 @@ export const checkCmd = new Command('check')
 				table.push([
 					'links',
 					checks.links.join(' '),
+					getOutcome(exitCode),
+					'Root',
+				] satisfies TableRow)
+			})
+		}
+
+		if (exports) {
+			await within(async () => {
+				const exitCode = await $`${checks.exports}`.exitCode
+				table.push([
+					'exports',
+					checks.exports.join(' '),
 					getOutcome(exitCode),
 					'Root',
 				] satisfies TableRow)

@@ -12,7 +12,7 @@ import type {
 	RichTextItemResponse,
 	TextRichTextItemResponse,
 	UserObjectResponse,
-} from './api-endpoints'
+} from './api-endpoints.js'
 
 interface PaginatedArgs {
 	start_cursor?: string
