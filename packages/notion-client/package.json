@@ -42,7 +42,7 @@
 	],
 	"scripts": {
 		"build": "runx build tsc ./src/index.ts",
-		"check:lint": "run-eslint-workers",
+		"check:lint": "run-eslint",
 		"check:types": "runx check --exports",
 		"test": "run-vitest"
 	},
