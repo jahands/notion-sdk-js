@@ -1,4 +1,4 @@
-import { assertNever } from './utils.js'
+import { assertNever } from './utils'
 
 export enum LogLevel {
 	DEBUG = 'debug',

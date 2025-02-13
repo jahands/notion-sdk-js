@@ -22,16 +22,16 @@ import {
 	updateBlock,
 	updateDatabase,
 	updatePage,
-} from './api-endpoints.js'
+} from './api-endpoints'
 import {
 	buildRequestError,
 	isHTTPResponseError,
 	isNotionClientError,
 	RequestTimeoutError,
-} from './errors.js'
-import { LogLevel, logLevelSeverity, makeConsoleLogger } from './logging.js'
-import { PACKAGE_NAME, PACKAGE_VERSION } from './package.js'
-import { pick } from './utils.js'
+} from './errors'
+import { LogLevel, logLevelSeverity, makeConsoleLogger } from './logging'
+import { PACKAGE_NAME, PACKAGE_VERSION } from './package'
+import { pick } from './utils'
 
 import type { Agent } from 'http'
 import type {
@@ -77,9 +77,9 @@ import type {
 	UpdateDatabaseResponse,
 	UpdatePageParameters,
 	UpdatePageResponse,
-} from './api-endpoints.js'
-import type { SupportedFetch } from './fetch-types.js'
-import type { Logger } from './logging.js'
+} from './api-endpoints'
+import type { SupportedFetch } from './fetch-types'
+import type { Logger } from './logging'
 
 export interface ClientOptions {
 	auth?: string

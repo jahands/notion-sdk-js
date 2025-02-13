@@ -1,6 +1,6 @@
-export { default as Client } from './Client.js'
-export { LogLevel } from './logging.js'
-export type { Logger } from './logging.js'
+export { default as Client } from './Client'
+export { LogLevel } from './logging'
+export type { Logger } from './logging'
 export {
 	APIErrorCode,
 	ClientErrorCode,
@@ -9,13 +9,13 @@ export {
 	RequestTimeoutError,
 	// Error helpers
 	isNotionClientError,
-} from './errors.js'
+} from './errors'
 export type {
 	// Error codes
 	NotionErrorCode,
 	// Error types
 	NotionClientError,
-} from './errors.js'
+} from './errors'
 export {
 	collectPaginatedAPI,
 	iteratePaginatedAPI,
@@ -25,4 +25,4 @@ export {
 	isFullUser,
 	isFullComment,
 	isFullPageOrDatabase,
-} from './helpers.js'
+} from './helpers'

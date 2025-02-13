@@ -5,7 +5,7 @@ import type {
 	RequestInit as NodeFetchRequestInit,
 	Response as NodeFetchResponse,
 } from 'node-fetch'
-import type { Assert } from './type-utils.js'
+import type { Assert } from './type-utils'
 
 // The `Supported` types should be kept up to date in order to exactly match what we use in the client. This ensures maximal compatibility with other `fetch` implementations.
 export type SupportedRequestInfo = string
