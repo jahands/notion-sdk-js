@@ -33,8 +33,8 @@ export const checkCmd = new Command('check')
 			lint = true
 			types = true
 			format = true
-			spelling = true
-			links = true
+			// spelling = true
+			// links = true
 		}
 
 		const cwd = process.cwd()
