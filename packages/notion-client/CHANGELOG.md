@@ -1,5 +1,11 @@
 # @jahands/notion-client
 
+## 2.2.20
+
+### Patch Changes
+
+- 8dff00f: fix: Switch to es2022
+
 ## 2.2.19
 
 ### Patch Changes

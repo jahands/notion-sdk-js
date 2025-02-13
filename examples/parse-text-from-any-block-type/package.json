@@ -1,6 +1,6 @@
 {
 	"name": "parse-text-from-any-block-type",
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"private": true,
 	"description": "Retrieve blocks from a Notion page and parse text from any block type.",
 	"bugs": {
