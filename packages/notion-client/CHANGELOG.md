@@ -1,5 +1,11 @@
 # @jahands/notion-client
 
+## 3.0.0
+
+### Major Changes
+
+- d6e280e: feat(BREAKING): switch to Node fetch types
+
 ## 2.2.20
 
 ### Patch Changes
