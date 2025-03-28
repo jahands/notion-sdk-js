@@ -47,8 +47,8 @@
 		"test": "run-vitest"
 	},
 	"dependencies": {
-		"@types/node-fetch": "2.6.12",
-		"node-fetch": "2.7.0"
+		"@types/node": "22.13.14",
+		"@types/node-fetch": "2.6.12"
 	},
 	"devDependencies": {
 		"@arethetypeswrong/cli": "0.17.3",

@@ -1,5 +1,3 @@
-import nodeFetch from 'node-fetch'
-
 import {
 	appendBlockChildren,
 	createComment,
@@ -23,17 +21,12 @@ import {
 	updateDatabase,
 	updatePage,
 } from './api-endpoints'
-import {
-	buildRequestError,
-	isHTTPResponseError,
-	isNotionClientError,
-	RequestTimeoutError,
-} from './errors'
+import { buildRequestError, isHTTPResponseError, isNotionClientError } from './errors'
 import { LogLevel, logLevelSeverity, makeConsoleLogger } from './logging'
 import { PACKAGE_NAME, PACKAGE_VERSION } from './package'
 import { pick } from './utils'
 
-import type { Agent } from 'http'
+import type { Agent } from 'node:http'
 import type {
 	AppendBlockChildrenParameters,
 	AppendBlockChildrenResponse,
@@ -78,7 +71,6 @@ import type {
 	UpdatePageParameters,
 	UpdatePageResponse,
 } from './api-endpoints'
-import type { SupportedFetch } from './fetch-types'
 import type { Logger } from './logging'
 
 export interface ClientOptions {
@@ -88,7 +80,6 @@ export interface ClientOptions {
 	logLevel?: LogLevel
 	logger?: Logger
 	notionVersion?: string
-	fetch?: SupportedFetch
 	/** Silently ignored in the browser */
 	agent?: Agent
 }
@@ -116,10 +107,7 @@ export default class Client {
 	#logLevel: LogLevel
 	#logger: Logger
 	#prefixUrl: string
-	#timeoutMs: number
 	#notionVersion: string
-	#fetch: SupportedFetch
-	#agent: Agent | undefined
 	#userAgent: string
 
 	static readonly defaultNotionVersion = '2022-06-28'
@@ -129,10 +117,7 @@ export default class Client {
 		this.#logLevel = options?.logLevel ?? LogLevel.WARN
 		this.#logger = options?.logger ?? makeConsoleLogger(PACKAGE_NAME)
 		this.#prefixUrl = (options?.baseUrl ?? 'https://api.notion.com') + '/v1/'
-		this.#timeoutMs = options?.timeoutMs ?? 60_000
 		this.#notionVersion = options?.notionVersion ?? Client.defaultNotionVersion
-		this.#fetch = options?.fetch ?? nodeFetch
-		this.#agent = options?.agent
 		this.#userAgent = `notionhq-client/${PACKAGE_VERSION}`
 	}
 
@@ -195,16 +180,12 @@ export default class Client {
 			headers['content-type'] = 'application/json'
 		}
 		try {
-			const _fetch = this.#fetch
-			const response = await RequestTimeoutError.rejectAfterTimeout(
-				_fetch(url.toString(), {
-					method: method.toUpperCase(),
-					headers,
-					body: bodyAsJsonString,
-					agent: this.#agent,
-				}),
-				this.#timeoutMs
-			)
+			const response = await fetch(url.toString(), {
+				method: method.toUpperCase(),
+				headers,
+				body: bodyAsJsonString,
+				signal: AbortSignal.timeout(60_000),
+			})
 
 			const responseText = await response.text()
 			if (!response.ok) {
