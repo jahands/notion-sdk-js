@@ -1,5 +1,12 @@
 # parse-text-from-any-block-type
 
+## 1.0.6
+
+### Patch Changes
+
+- Updated dependencies [d6e280e]
+  - @jahands/notion-client@3.0.0
+
 ## 1.0.5
 
 ### Patch Changes

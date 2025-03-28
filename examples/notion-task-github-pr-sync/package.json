@@ -1,6 +1,6 @@
 {
 	"name": "notion-task-github-pr-sync",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"private": true,
 	"description": "Sync Notion tasks with Github PRs",
 	"license": "MIT",
