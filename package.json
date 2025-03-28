@@ -44,7 +44,7 @@
 		"typescript": "5.5.4",
 		"vitest": "2.1.8"
 	},
-	"packageManager": "pnpm@10.3.0",
+	"packageManager": "pnpm@10.7.0",
 	"engines": {
 		"node": ">=20"
 	},
