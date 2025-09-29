@@ -148,9 +148,9 @@ importers:
 
   examples/intro-to-notion-api:
     dependencies:
-      '@notionhq/client':
-        specifier: file:../..
-        version: '@repo/notion-sdk-js@file:'
+      '@jahands/notion-client':
+        specifier: workspace:*
+        version: link:../../packages/notion-client
       dotenv:
         specifier: 17.2.1
         version: 17.2.1
@@ -226,9 +226,9 @@ importers:
 
   examples/parse-text-from-any-block-type:
     dependencies:
-      '@notionhq/client':
-        specifier: file:../..
-        version: '@repo/notion-sdk-js@file:'
+      '@jahands/notion-client':
+        specifier: workspace:*
+        version: link:../../packages/notion-client
       dotenv:
         specifier: 17.2.1
         version: 17.2.1
@@ -245,9 +245,9 @@ importers:
 
   examples/web-form-with-express:
     dependencies:
-      '@notionhq/client':
-        specifier: file:../..
-        version: '@repo/notion-sdk-js@file:'
+      '@jahands/notion-client':
+        specifier: workspace:*
+        version: link:../../packages/notion-client
       dotenv:
         specifier: 17.2.1
         version: 17.2.1
@@ -1650,10 +1650,6 @@ packages:
   '@pkgr/core@0.1.1':
     resolution: {integrity: sha512-cq8o4cWH0ibXh9VGi5P20Tu9XF/0fFXl9EUinr9QfTM7a7p0oTA4iJRCQWppXR1Pg8dSM0UCItCkPwsk9qWWYA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
-
-  '@repo/notion-sdk-js@file:':
-    resolution: {directory: '', type: directory}
-    engines: {node: '>=20'}
 
   '@rollup/rollup-android-arm-eabi@4.34.6':
     resolution: {integrity: sha512-+GcCXtOQoWuC7hhX1P00LqjjIiS/iOouHXhMdiDSnq/1DGTox4SpUvO52Xm+div6+106r+TcvOeo/cxvyEyTgg==}
@@ -6563,13 +6559,6 @@ snapshots:
   '@oozcitak/util@8.3.8': {}
 
   '@pkgr/core@0.1.1': {}
-
-  '@repo/notion-sdk-js@file:':
-    dependencies:
-      '@types/node-fetch': 2.6.12
-      node-fetch: 2.7.0
-    transitivePeerDependencies:
-      - encoding
 
   '@rollup/rollup-android-arm-eabi@4.34.6':
     optional: true
