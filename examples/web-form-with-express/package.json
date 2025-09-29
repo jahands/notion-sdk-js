@@ -1,6 +1,7 @@
 {
 	"name": "web-form-with-express-example",
 	"version": "1.0.1",
+	"private": true,
 	"description": "Internal Notion integration demo app using Express.js for a server.",
 	"keywords": [
 		"node",

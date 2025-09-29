@@ -1,6 +1,7 @@
 {
 	"name": "generate-random-data",
 	"version": "1.0.2",
+	"private": true,
 	"description": "Generate random data in a Notion Database.",
 	"license": "MIT",
 	"author": "David Blackman",

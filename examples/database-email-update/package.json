@@ -1,5 +1,6 @@
 {
   "name": "database-update-send-email",
+  "private": true,
   "version": "1.0.1",
   "description": "Send an email with SendGrid when an update is made in Notion.",
   "main": "index.js",
