@@ -1,5 +1,24 @@
 {
-	"extends": "@repo/typescript-config/lib.json",
-	"include": ["**/*.ts"],
-	"exclude": ["node_modules", "dist", "tsconfig.json"]
+  "compilerOptions": {
+    "incremental": true,
+    "sourceMap": false,
+
+    "target": "ESNext",
+    "module": "commonjs",
+
+    "moduleResolution": "Node",
+
+    "allowSyntheticDefaultImports": true,
+
+    "useDefineForClassFields": false,
+
+    "strict": false,
+
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "noUncheckedIndexedAccess": true,
+    "allowJs": true,
+    "checkJs": false
+  },
+  "include": ["**/*.ts", "**/*.js"]
 }

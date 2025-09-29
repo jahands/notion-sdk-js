@@ -1,5 +1,15 @@
 {
-	"extends": "@repo/typescript-config/lib.json",
-	"include": ["**/*.ts", "**/*.js"],
-	"exclude": ["node_modules", "dist", "tsconfig.json"]
+  "compilerOptions": {
+    "target": "ES2019",
+    "module": "commonjs",
+    "moduleResolution": "Node",
+    "allowSyntheticDefaultImports": true,
+    "strict": false,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "checkJs": false,
+    "resolveJsonModule": true,
+    "forceConsistentCasingInFileNames": true
+  },
+  "include": ["**/*.ts", "**/*.js"]
 }

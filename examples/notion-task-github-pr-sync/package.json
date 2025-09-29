@@ -1,27 +1,27 @@
 {
 	"name": "notion-task-github-pr-sync",
-	"version": "1.0.6",
-	"private": true,
+	"version": "1.0.0",
 	"description": "Sync Notion tasks with Github PRs",
 	"license": "MIT",
 	"author": "Sid Verma",
-	"main": "index.js",
+	"main": "index.ts",
 	"scripts": {
-		"start": "",
+		"start": "ts-node index.ts",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
 		"@jahands/notion-client": "workspace:*",
-		"dotenv": "16.4.7",
+		"dotenv": "17.2.1",
 		"lodash": "4.17.21",
-		"octokit": "2.1.0"
+		"octokit": "2.0.3"
 	},
 	"devDependencies": {
-		"@repo/eslint-config": "workspace:*",
-		"@repo/tools": "workspace:*",
-		"@repo/typescript-config": "workspace:*"
+		"@types/lodash": "4.14.170",
+		"@types/node": "22.13.14",
+		"ts-node": "10.8.2",
+		"typescript": "5.5.4"
 	},
 	"engines": {
-		"node": ">=20"
+		"node": ">=14"
 	}
 }

@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
-		"target": "ES2022",
-		"module": "ES2022",
+		"target": "ES2019",
+		"module": "commonjs",
 		"moduleResolution": "Node",
 		"allowSyntheticDefaultImports": true,
 		"strict": false,
@@ -11,5 +11,6 @@
 		"resolveJsonModule": true,
 		"forceConsistentCasingInFileNames": true
 	},
-	"include": ["**/*.ts", "**/*.js"]
+	"include": ["**/*.ts", "**/*.js"],
+	"exclude": ["public/**/*"]
 }
