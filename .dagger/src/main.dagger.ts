@@ -29,7 +29,7 @@ const projectIncludes: string[] = [
 ]
 
 @object()
-export class Dotfiles {
+export class NotionSdkJs {
 	source: Directory
 
 	constructor(
