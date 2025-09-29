@@ -33,6 +33,14 @@ const config = {
 	plugins: ['@ianvs/prettier-plugin-sort-imports', 'prettier-plugin-packagejson'],
 	importOrder: [...codeImports, ...typeImports],
 	importOrderTypeScriptVersion: '5.5.3',
+	overrides: [
+		{
+			files: '*.jsonc',
+			options: {
+				trailingComma: 'none',
+			},
+		},
+	],
 }
 
 module.exports = config

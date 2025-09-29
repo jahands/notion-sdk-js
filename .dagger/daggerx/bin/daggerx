@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+dagx_path="$(realpath "$(dirname "$0")/..")"
+
+if [ ! -d "$dagx_path/node_modules" ]; then
+	prev_dir="$(pwd)"
+	# shellcheck disable=SC2064
+	trap "cd \"$prev_dir\"" EXIT
+	cd "$dagx_path"
+	bun install --frozen-lockfile --silent --production
+	cd "$prev_dir"
+	trap - EXIT # remove the trap
+fi
+
+dagx_bin="$dagx_path/src/bin/daggerx.cmd.ts"
+bun "$dagx_bin" "$@"

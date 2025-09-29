@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"allowImportingTsExtensions": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"forceConsistentCasingInFileNames": true,
+		"strict": true,
+		"noEmit": true,
+		"skipLibCheck": true,
+		"experimentalDecorators": true,
+		"emitDecoratorMetadata": true,
+		"paths": {
+			"@dagger.io/dagger": ["./sdk/index.ts"],
+			"@dagger.io/dagger/telemetry": ["./sdk/telemetry.ts"]
+		}
+	},
+	"exclude": ["node_modules"]
+}
