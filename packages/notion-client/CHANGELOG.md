@@ -1,5 +1,11 @@
 # @jahands/notion-client
 
+## 5.0.0
+
+### Major Changes
+
+- a618bbf: feat: bump version to 5.0.0 to match upstream client
+
 ## 4.0.0
 
 ### Major Changes

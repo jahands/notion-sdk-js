@@ -1,5 +1,12 @@
 # notion-task-github-pr-sync
 
+## 1.0.2
+
+### Patch Changes
+
+- Updated dependencies [a618bbf]
+  - @jahands/notion-client@5.0.0
+
 ## 1.0.1
 
 ### Patch Changes
