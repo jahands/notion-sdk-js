@@ -1,5 +1,3 @@
-set shell := ["zsh", "-c"]
-
 alias up := update
 
 [private]
