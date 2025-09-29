@@ -1,5 +1,11 @@
 # @jahands/notion-client
 
+## 4.0.0
+
+### Major Changes
+
+- 8c88aa5: feat: rebase based on @notionhq/client@5.1.0
+
 ## 3.0.0
 
 ### Major Changes

@@ -1,6 +1,6 @@
 {
   "name": "intro-to-notion-api",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Introductory examples of using Notion's public API via the Notion SDK for JavaScript.",
   "main": "index.js",
   "type": "module",
