@@ -28,7 +28,7 @@ jobs:
         with:
           node-version: lts/*
       - name: Install Dependencies
-        run: pnpm install --frozen-lockfile --child-concurrency=10 --filter .
+        run: pnpm install --frozen-lockfile --child-concurrency=10
       - name: Create Release PR or Publish NPM Packages
         uses: changesets/action@v1
         with:
