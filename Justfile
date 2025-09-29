@@ -32,3 +32,7 @@ build:
 # Update things in the repo
 update *flags:
   bun runx update {{flags}}
+
+[no-cd]
+dagx *flags:
+  @"{{justfile_directory()}}/.dagger/daggerx/bin/daggerx" {{flags}}
