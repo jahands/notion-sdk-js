@@ -1,7 +1,7 @@
 {
 	"$schema": "https://docs.dagger.io/reference/dagger.schema.json",
 	"name": "notion-sdk-js",
-	"engineVersion": "v0.18.19",
+	"engineVersion": "v0.19.7",
 	"sdk": {
 		"source": "typescript"
 	},
